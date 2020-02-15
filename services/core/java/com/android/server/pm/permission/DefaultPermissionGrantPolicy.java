@@ -959,6 +959,11 @@ final class DefaultPermissionGrantPolicy {
         grantSystemFixedPermissionsToSystemPackage(pm, "org.chromium.chrome", userId, CONTACTS_PERMISSIONS,
                 STORAGE_PERMISSIONS);
 
+        // DownloadProviders
+        grantSystemFixedPermissionsToSystemPackage(pm,"com.android.providers.downloads.DownloadProvider", userId, STORAGE_PERMISSIONS);
+
+        // LOS Updater
+        grantSystemFixedPermissionsToSystemPackage(pm,"org.lineageos.updater", userId, STORAGE_PERMISSIONS);
     }
 
     private String getDefaultSystemHandlerActivityPackageForCategory(PackageManagerWrapper pm,
