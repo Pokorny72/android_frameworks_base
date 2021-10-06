@@ -29,7 +29,6 @@ license {
     ],
 }
 
-
 prebuilt_font {
     name: "AndroidClock.ttf",
     src: "AndroidClock.ttf",
