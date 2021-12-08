@@ -5681,41 +5681,6 @@ public final class Settings {
             PRIVATE_SETTINGS.add(SHOW_BATTERY_PERCENT);
             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE);
             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE_VENDOR_HINT);
-<<<<<<< HEAD
-=======
-            PRIVATE_SETTINGS.add(SWIPE_TO_SCREENSHOT);
-            PRIVATE_SETTINGS.add(VIBRATE_ON_CONNECT);
-            PRIVATE_SETTINGS.add(VIBRATE_ON_CALLWAITING);
-            PRIVATE_SETTINGS.add(VIBRATE_ON_DISCONNECT);
-            PRIVATE_SETTINGS.add(POCKET_JUDGE);
-            PRIVATE_SETTINGS.add(VOLUME_KEY_CURSOR_CONTROL);
-            PRIVATE_SETTINGS.add(TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK);
-            PRIVATE_SETTINGS.add(HIGH_TOUCH_POLLING_RATE_ENABLE);
-            PRIVATE_SETTINGS.add(HIGH_TOUCH_SENSITIVITY_ENABLE);
-            PRIVATE_SETTINGS.add(DISPLAY_TEMPERATURE_DAY);
-            PRIVATE_SETTINGS.add(DISPLAY_TEMPERATURE_NIGHT);
-            PRIVATE_SETTINGS.add(DISPLAY_TEMPERATURE_MODE);
-            PRIVATE_SETTINGS.add(DISPLAY_AUTO_OUTDOOR_MODE);
-            PRIVATE_SETTINGS.add(DISPLAY_ANTI_FLICKER);
-            PRIVATE_SETTINGS.add(DISPLAY_READING_MODE);
-            PRIVATE_SETTINGS.add(DISPLAY_CABC);
-            PRIVATE_SETTINGS.add(DISPLAY_COLOR_ENHANCE);
-            PRIVATE_SETTINGS.add(DISPLAY_AUTO_CONTRAST);
-            PRIVATE_SETTINGS.add(DISPLAY_COLOR_ADJUSTMENT);
-            PRIVATE_SETTINGS.add(DISPLAY_PICTURE_ADJUSTMENT);
-            PRIVATE_SETTINGS.add(LIVE_DISPLAY_HINTED);
-            PRIVATE_SETTINGS.add(INCREASING_RING);
-            PRIVATE_SETTINGS.add(INCREASING_RING_START_VOLUME);
-            PRIVATE_SETTINGS.add(INCREASING_RING_RAMP_UP_TIME);
-            PRIVATE_SETTINGS.add(BATTERY_LIGHT_ENABLED);
-            PRIVATE_SETTINGS.add(BATTERY_LIGHT_ALLOW_ON_DND);
-            PRIVATE_SETTINGS.add(BATTERY_LIGHT_LOW_BLINKING);
-            PRIVATE_SETTINGS.add(BATTERY_LIGHT_LOW_COLOR);
-            PRIVATE_SETTINGS.add(BATTERY_LIGHT_MEDIUM_COLOR);
-            PRIVATE_SETTINGS.add(BATTERY_LIGHT_FULL_COLOR);
-            PRIVATE_SETTINGS.add(BATTERY_LIGHT_REALLYFULL_COLOR);
-            PRIVATE_SETTINGS.add(NAV_BAR_COMPACT_LAYOUT);
->>>>>>> fb571ada2d28 (SystemUI: Allow enabling compact layout of navigation bar)
         }
 
         /**
@@ -10927,7 +10892,7 @@ public final class Settings {
 
         /**
          * Gesture navbar length mode.
-         * Supported modes: 0 for normal length, 1 for medium and 2 for long.
+         * Supported modes: 0 for hidden, 1 for normal length, 2 for medium and 3 for long.
          * Default 0.
          * @hide
          */
