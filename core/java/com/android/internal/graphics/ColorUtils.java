@@ -23,6 +23,7 @@ import android.annotation.NonNull;
 import android.graphics.Color;
 import android.util.Log;
 import android.util.MathUtils;
+import android.util.Log;
 
 import com.android.internal.graphics.cam.Cam;
 
