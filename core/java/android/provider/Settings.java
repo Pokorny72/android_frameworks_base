@@ -5558,6 +5558,7 @@ public final class Settings {
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
          * the setting value. See an example above.
          */
+        public static final String NAVIGATION_BAR_GESTURAL_NARROW = "navigation_bar_gestural_narrow";
 
         /**
          * Keys we no longer back up under the current schema, but want to continue to
