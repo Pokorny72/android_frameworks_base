@@ -403,10 +403,10 @@ public class UdfpsController implements DozeReceiver {
         );
         final int rot = mOverlayParams.getRotation();
         if (rot == Surface.ROTATION_90 || rot == Surface.ROTATION_270) {
-            RotationUtils.rotatePoint(portraitTouch,
-                    RotationUtils.deltaRotation(rot, Surface.ROTATION_0),
-                    mOverlayParams.getLogicalDisplayWidth(),
-                    mOverlayParams.getLogicalDisplayHeight()
+            // RotationUtils.rotatePoint(portraitTouch,
+            //         RotationUtils.deltaRotation(rot, Surface.ROTATION_0),
+            //         mOverlayParams.getLogicalDisplayWidth(),
+            //         mOverlayParams.getLogicalDisplayHeight()
             );
         }
 
