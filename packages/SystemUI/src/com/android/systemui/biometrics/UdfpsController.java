@@ -407,7 +407,7 @@ public class UdfpsController implements DozeReceiver {
             //         RotationUtils.deltaRotation(rot, Surface.ROTATION_0),
             //         mOverlayParams.getLogicalDisplayWidth(),
             //         mOverlayParams.getLogicalDisplayHeight()
-            );
+            //);
         }
 
         // Scale the coordinates to native resolution.
