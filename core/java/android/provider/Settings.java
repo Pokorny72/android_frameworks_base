@@ -10595,7 +10595,7 @@ public final class Settings {
          * Disables adding a timestamp to screenshot EXIF
          * @hide
          */
-        public static final int DISABLE_SCREENSHOT_TIMESTAMP_EXIF = 0
+        public static final int DISABLE_SCREENSHOT_TIMESTAMP_EXIF = 0;
 
         /**
          * Controls whether contextual suggestions can be shown in the media controls.
