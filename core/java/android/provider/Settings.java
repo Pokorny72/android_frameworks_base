@@ -5540,6 +5540,13 @@ public final class Settings {
         public static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
 
         /**
+         * Whether to inverse keys in navigation bar
+         * Default 0
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_INVERSE = "navigation_bar_inverse";
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
