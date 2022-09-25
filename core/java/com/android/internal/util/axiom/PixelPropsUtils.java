@@ -24,6 +24,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import android.app.Application;
+
 
 public class PixelPropsUtils {
 
@@ -104,7 +106,11 @@ public class PixelPropsUtils {
             return;
         }
         if (packageName.equals(PACKAGE_GMS)) {
-            sIsGms = true;
+            //sIsGms = true;
+            final String processName = Application.getProcessName();
+             if (processName.equals("com.google.android.gms.unstable")) {
+                 sIsGms = true;
+             }
         }
         if ((packageName.startsWith("com.google.") && !Arrays.asList(packagesToKeep).contains(packageName))
                 || Arrays.asList(extraPackagesToChange).contains(packageName)) {
