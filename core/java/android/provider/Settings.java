@@ -3615,6 +3615,8 @@ public final class Settings {
 
             // At one time in System, then Global, but now back in Secure
             MOVED_TO_SECURE.add(Secure.INSTALL_NON_MARKET_APPS);
+
+            MOVED_TO_SECURE.add(Secure.VOLUME_LINK_NOTIFICATION);
         }
 
         @UnsupportedAppUsage(maxTargetSdk = Build.VERSION_CODES.R, trackingBug = 170729553)
@@ -4519,6 +4521,18 @@ public final class Settings {
          * @hide
          */
         public static final String LOW_POWER_REFRESH_RATE = "low_power_rr_switch";
+
+        /**
+        * The user selected preferred refresh rate in frames per second.
+        *
+        * This defines the refresh rate at which UI will run, provided it
+        * falls in the range of minimum and peak refresh rate.
+        *
+        * If this isn't set, the system falls back to a device specific default.
+        * @hide
+        */
+       @Readable
+       public static final String PREFERRED_REFRESH_RATE = "preferred_refresh_rate";
 
         /**
          * The amount of time in milliseconds before the device goes to sleep or begins
@@ -5558,6 +5572,12 @@ public final class Settings {
          */
         @Readable
         public static final String SENSOR_BLOCK = "sensor_block";
+
+        /**
+         * Volume panel on left
+         * @hide
+         */
+        public static final String VOLUME_PANEL_ON_LEFT = "volume_panel_on_left";
 
         /**
          * IMPORTANT: If you add a new public settings you also have to add it to
@@ -10800,6 +10820,12 @@ public final class Settings {
          * @hide
          */
         public static final String ADAPTIVE_CONNECTIVITY_ENABLED = "adaptive_connectivity_enabled";
+
+        /**
+         * Boolean value whether to link ringtone and notification volume
+         * @hide
+         */
+        public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
 
         /**
          * Keys we no longer back up under the current schema, but want to continue to
