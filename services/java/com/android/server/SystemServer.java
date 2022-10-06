@@ -231,6 +231,9 @@ import java.util.TreeSet;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Future;
 
+// LineageHardware
+import com.android.server.axiom.LineageHardwareService;
+
 /**
  * Entry point to {@code system_server}.
  */
@@ -2520,6 +2523,20 @@ public final class SystemServer implements Dumpable {
             t.traceBegin("StartMediaMetricsManager");
             mSystemServiceManager.startService(MediaMetricsManagerService.class);
             t.traceEnd();
+
+            // if (!context.getResources().getString(
+            //         com.android.internal.R.string.config_pocketBridgeSysfsInpocket).isEmpty()) {
+            //     t.traceBegin("StartPocketBridgeService");
+            //     mSystemServiceManager.startService(PocketBridgeService.class);
+            //     t.traceEnd();
+            // }
+
+            // LineageHardware
+            if (!mOnlyCore){
+                t.traceBegin("StartLineageHardwareService");
+                mSystemServiceManager.startService(LineageHardwareService.class);
+                t.traceEnd();
+            }
         }
 
         t.traceBegin("StartMediaProjectionManager");
