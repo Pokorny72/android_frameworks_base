@@ -10685,6 +10685,15 @@ public final class Settings {
         public static final String MEDIA_CONTROLS_RECOMMENDATION = "qs_media_recommend";
 
         /**
+        * Whether to auto grant OTHER_SENSORS special runtime permission to new user apps (0 or 1).
+        * @hide
+        */
+        public static final String AUTO_GRANT_OTHER_SENSORS_PERMISSION = "auto_grant_OTHER_SENSORS_perm";
+
+        /** @hide */
+        public static final int AUTO_GRANT_OTHER_SENSORS_PERMISSION_DEFAULT = 1;
+
+        /**
          * Controls magnification mode when magnification is enabled via a system-wide triple tap
          * gesture or the accessibility shortcut.
          *
