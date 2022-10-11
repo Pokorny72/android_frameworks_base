@@ -136,6 +136,11 @@ public class PixelPropsUtils {
                 setPropValue(key, value);
             }
         }
+
+        if (sIsGms) {
+                setPropValue("FINGERPRINT", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
+                setPropValue("MODEL", "walleye");
+        }
         // Set proper indexing fingerprint
         if (packageName.equals("com.google.android.settings.intelligence")) {
             setPropValue("FINGERPRINT", Build.VERSION.INCREMENTAL);
