@@ -65,6 +65,8 @@ open class QSTileViewImpl @JvmOverloads constructor(
         private const val SECONDARY_LABEL_NAME = "secondaryLabel"
         private const val CHEVRON_NAME = "chevron"
         const val UNAVAILABLE_ALPHA = 0.3f
+        const val ACTIVE_ALPHA = 0.8f
+        const val INACTIVE_APLHA = 0.7f
         @VisibleForTesting
         internal const val TILE_STATE_RES_PREFIX = "tile_states_"
     }
@@ -603,8 +605,8 @@ open class QSTileViewImpl @JvmOverloads constructor(
 
     private fun getBackgroundColorForState(state: Int): Int {
         return when (state) {
-            Tile.STATE_ACTIVE -> colorActive
-            Tile.STATE_INACTIVE -> colorInactive
+            Tile.STATE_ACTIVE -> Utils.applyAlpha(ACTIVE_ALPHA, colorActive)
+            Tile.STATE_INACTIVE -> Utils.applyAlpha(INACTIVE_APLHA, colorInactive)
             Tile.STATE_UNAVAILABLE -> colorUnavailable
             else -> {
                 Log.e(TAG, "Invalid state $state")
