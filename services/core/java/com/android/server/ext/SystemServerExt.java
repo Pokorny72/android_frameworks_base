@@ -56,7 +56,7 @@ public final class SystemServerExt {
         instance = sse;
 
         // init synchronously to make sure they are disabled before any of the apps are started
-        new GoogleEuiccPkgsDisabler(sse);
+        //new GoogleEuiccPkgsDisabler(sse);
     }
 
     void initBgThread() {
