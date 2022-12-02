@@ -20,4 +20,7 @@
         refresh_rate
     </string> 
 
+    <!-- Whether show refresh rate QS tile -->
+    <bool name="config_showRefreshRateQsTile">false</bool>
+
 </resources>
