@@ -52,6 +52,7 @@ import com.android.systemui.qs.tiles.OneHandedModeTile;
 import com.android.systemui.qs.tiles.QRCodeScannerTile;
 import com.android.systemui.qs.tiles.QuickAccessWalletTile;
 import com.android.systemui.qs.tiles.ReduceBrightColorsTile;
+import com.android.systemui.qs.tiles.RefreshRateTile;
 import com.android.systemui.qs.tiles.RotationLockTile;
 import com.android.systemui.qs.tiles.ScreenRecordTile;
 import com.android.systemui.qs.tiles.UiModeNightTile;
@@ -99,6 +100,7 @@ public class QSFactoryImpl implements QSFactory {
     private final Provider<QRCodeScannerTile> mQRCodeScannerTileProvider;
     private final Provider<OneHandedModeTile> mOneHandedModeTileProvider;
     private final Provider<CaffeineTile> mCaffeineTileProvider;
+    private final Provider<CustomTile.Builder> mCustomTileBuilderProvider;
 
     private final Lazy<QSHost> mQsHostLazy;
     private final Provider<CustomTile.Builder> mCustomTileBuilderProvider;
@@ -136,7 +138,8 @@ public class QSFactoryImpl implements QSFactory {
             Provider<QRCodeScannerTile> qrCodeScannerTileProvider,
             Provider<OneHandedModeTile> oneHandedModeTileProvider,
             Provider<ColorCorrectionTile> colorCorrectionTileProvider,
-            Provider<CaffeineTile> caffeineTileProvider) {
+            Provider<CaffeineTile> caffeineTileProvider)
+            Provider<RefreshRateTile> refreshRateTileProvider) {
         mQsHostLazy = qsHostLazy;
         mCustomTileBuilderProvider = customTileBuilderProvider;
 
@@ -170,6 +173,7 @@ public class QSFactoryImpl implements QSFactory {
         mOneHandedModeTileProvider = oneHandedModeTileProvider;
         mColorCorrectionTileProvider = colorCorrectionTileProvider;
         mCaffeineTileProvider = caffeineTileProvider;
+        mRefreshRateTileProvider = refreshRateTileProvider;
     }
 
     /** Creates a tile with a type based on {@code tileSpec} */
@@ -246,6 +250,8 @@ public class QSFactoryImpl implements QSFactory {
             // Additional tiles.
             case "caffeine":
                 return mCaffeineTileProvider.get();
+            case "refresh_rate":
+                return mRefreshRateTileProvider.get();
         }
 
         // Custom tiles
